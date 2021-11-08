@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+
+    <!-- estilos de las loaders -->
+    <link rel="stylesheet" href="1_uno.css" />
+    <link rel="stylesheet" href="2_dos.css" />
+    <title>Loaders</title>
+  </head>
+  <body>
+    <div class="bodyUno">
+      <div class="containerUno">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+
+    <div class="bodyDos">
+      <div class="loaderDos">
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3"></span>
+        <span style="--i: 4"></span>
+        <span style="--i: 5"></span>
+        <span style="--i: 6"></span>
+        <span style="--i: 7"></span>
+      </div>
+      <svg class="svgDos">
+        <filter id="gooey">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+          <feColorMatrix
+            values="
+            1 0 0 0 0 
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 20 -10
+            "
+          />
+        </filter>
+      </svg>
+    </div>
+  </body>
+</html>
