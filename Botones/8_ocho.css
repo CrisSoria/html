@@ -1,0 +1,80 @@
+/* usar las variables del style html para variar color y velocidad... https://www.youtube.com/watch?v=L8VU8Ad_gpc */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:100,200,300,400,500,600,700,800,900");
+.bodyOcho {
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #0e1538;
+  /* color: red; */
+  width: 100%;
+  height: 100%;
+}
+.bodyOcho a {
+  position: relative;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 40px;
+  transition: 1s;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0004);
+}
+.bodyOcho a:hover {
+  background: var(--clr);
+  /* prettier-ignore */
+  box-shadow: 0 0 10px var(--clr),
+  0 0 30px var(--clr),
+  0 0 60px var(--clr),
+  0 0 100px var(--clr);
+}
+.bodyOcho a::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 400px;
+  background: var(--clr);
+  transition: 1s;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.33s * var(--i));
+}
+.bodyOcho a:hover::before {
+  width: 120%;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.bodyOcho a::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #0e1538;
+  transition: 0.5s;
+}
+.bodyOcho a:hover::after {
+  background: var(--clr);
+}
+.bodyOcho a span {
+  position: relative;
+  z-index: 1;
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+.bodyOcho a:hove span {
+  opacity: 1;
+}
